@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>爱心特效</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: radial-gradient(circle at center,#FFC0CB,#FFC0CB,#FFCCFF);	
+		}
+		
+		.heart{
+			width: 280px;
+			height: 220px;
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		.heart span{
+			--c:#FF66FF;
+			--h:50%;
+			--t:25%;
+			background-color: var(--c);
+			width: 20px;
+			border-radius: 10px;
+			position: relative;
+			height: var(--h);
+			top: var(--t);
+			animation: beating 2s infinite;
+		}
+		
+		.heart span:nth-child(1),
+		.heart span:nth-child(9){
+			--c:lightcoral;
+			--h:60px;
+			--t:44px;
+		}
+		
+		.heart span:nth-child(2),
+		.heart span:nth-child(8){
+			--c:#99CCFF;
+			--h:120px;
+			--t:12px;
+		}
+		
+		.heart span:nth-child(3),
+		.heart span:nth-child(7){
+			--c:#66CC99;
+			--h:160px;
+			--t:0px;
+		}
+		
+		.heart span:nth-child(4),
+		.heart span:nth-child(6){
+			--c:#FFFF66;
+			--h:180px;
+			--t:16px;
+		}
+		
+		.heart span:nth-child(5){
+			--c:#FF66FF;
+			--h:188px;
+			--t:32px;
+		}
+		
+		@keyframes beating {
+			0%,30%{
+				height: var(--h);
+				top: var(--t);
+				background-color: (--c);
+				filter: blur(0)
+			}
+			60%,70%{
+				height: 50%;
+				top: 25%;
+				background-color: #FF66FF;
+				filter: blur(5px)
+			}
+		}
+		
+		@keyframes loveing {
+			0%{
+				color: transparent;
+			}
+			100%{
+				color: white;
+				transform: translate(0px,-100px)
+			}
+		}
+	</style>
+</head>
+
+<body>
+    <div class="heart">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	
+	
+</body>
+</html>
